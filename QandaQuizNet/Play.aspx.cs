@@ -12,6 +12,7 @@ using Microsoft.AspNet.FriendlyUrls;
 using QandaQuizNet.Utilities;
 using QandaQuizNet.Settings;
 
+// new theme //
 
 namespace QandaQuizNet
 {
