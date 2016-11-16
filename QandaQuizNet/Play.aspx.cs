@@ -206,15 +206,16 @@ namespace QandaQuizNet
             if (tenQuizList.Count == 10) //after we have 10 genuine winners in the system, show them instead of fake names
             {
                 var winnerList = new StringBuilder();
+                winnerList.Append("<ul>");
                 foreach (var quiz in tenQuizList)
                 {
                     if (quiz.quizWinner != null)
                     {
-                        winnerList.Append(quiz.quizWinner.FirstName + ", " + quiz.quizWinner.TownCity + "<br/><br/>");
+                        winnerList.Append("<li>" + quiz.quizWinner.FirstName + ", " + quiz.quizWinner.TownCity + "<li/>");
                         //winnerList.Append(quiz.quizWinner.FirstName + " " + quiz.quizWinner.LastName + "," + quiz.quizWinner.TownCity + "<br/><br/>");
                     }
                 }
-
+                winnerList.Append("</ul>");
                 var finalWinnerList = winnerList.ToString();
                 TenWinnerScrollList.InnerHtml = finalWinnerList;
             }
