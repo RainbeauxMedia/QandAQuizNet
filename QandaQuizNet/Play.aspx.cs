@@ -216,6 +216,7 @@ namespace QandaQuizNet
                     }
                 }
                 winnerList.Append("</ul>");
+
                 var finalWinnerList = winnerList.ToString();
                 TenWinnerScrollList.InnerHtml = finalWinnerList;
             }
